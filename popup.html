@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance Predictor</title>
+
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <div>
+                <h2>Get your days!</h2>
+                
+            </div>
+
+            <span class="status">● Connected</span>
+        </header>
+
+        <!-- Current Attendance -->
+        <section class="attendance-card">
+
+            <p class="label">Current Attendance</p>
+
+            <h1 id="percentage">--%</h1>
+
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <div class="stats">
+
+                <div>
+                    <h3 id="total">--</h3>
+                    <p>Total Classes</p>
+                </div>
+
+                <div>
+                    <h3 id="present">--</h3>
+                    <p>Present</p>
+                </div>
+
+                <div>
+                    <h3 id="absent">--</h3>
+                    <p>Absent</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Bunk Prediction -->
+        <section class="prediction-card">
+
+            <p class="label">Additional Classes You Can Miss</p>
+
+            <h1 id="bunk-count">--</h1>
+
+            <p class="description">
+                Based on your attendance requirement
+            </p>
+
+        </section>
+
+        <!-- Semester Prediction -->
+        <section class="semester-card">
+
+            <h3>Semester Prediction</h3>
+
+            <div class="input-group">
+                <label for="semester-total">
+                    Expected total semester classes
+                </label>
+
+                <input
+                    type="number"
+                    id="semester-total"
+                    placeholder="Enter expected classes"
+                >
+            </div>
+
+            <p id="semester-result">
+                Enter the expected semester classes to predict.
+            </p>
+
+        </section>
+
+        <!-- Footer -->
+        <button id="refresh">
+            Refresh Attendance
+        </button>
+
+        <footer>
+            Attendance data fetched from Vasavi ERP
+        </footer>
+
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
+</html>
